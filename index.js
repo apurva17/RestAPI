@@ -27,13 +27,25 @@ res.send('Hello World');
  app.post('/api/authentication',(req,res)=>{
    
     const log={
-
-email:req.body.email,
-password:req.body.password,
+    email:req.body.email,
+    password:req.body.password,
 
     };
-    logs.push(log);
-    res.send(log);
+
+    let resLog = {
+        email:'',
+        password:''
+    }
+
+    const res1 = logs.map((item)=>{
+        if(item.email == log.email && item.password == log.password){
+            resLog.email = log.email;
+            resLog.password = log.password;
+        }
+      
+    })
+
+    res.send(resLog);
 });
 
 
