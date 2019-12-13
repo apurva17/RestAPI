@@ -5,7 +5,19 @@ app.use(express.json());
 
 const logs = [
     {
-        email: 'apurva@gmail.com',
+        email: 'admin@mergemaster.com',
+        password: '123456'
+    },
+    {
+        email: 'apurva@mergemaster.com',
+        password: '123456'
+    },
+    {
+        email: 'admin@infovision.com',
+        password: '123456'
+    },
+    {
+        email: 'user@mergemaster.com',
         password: '123456'
     },
     {
